@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #E3F2FD;
+}
+
+.container {
+    width: 850px;
+    background: #fff;
+    padding: 30px 35px 35px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.container.disable :where(.editor-panel , .reset-filter, .preview-img){
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.container h2{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.container .wrapper {
+    display: flex;
+    margin:20px 0;
+    min-height: 335px;
+}
+
+.wrapper .editor-panel {
+    width: 280px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+.editor-panel .title {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.editor-panel .options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.editor-panel button{
+    height: 40px;
+    font-size: 14px;
+    color: #6C757D;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    background:#fff;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+
+/* .editor-panel button:hover{
+ background:#5372F0 ;
+ color: #fff;
+} */
+
+.editor-panel .filter button {
+    width: calc(100% / 2 - 4px);
+}
+
+.filter button.active{
+    color:#fff;
+    background: #5372F0;
+    border-color: #5372F0;
+}
+
+.filter .slider{
+    margin-top: 12pxx;
+}
+.filter .slider .filter-info{
+    display: flex;
+    color:#464646;
+    font-size:14px;
+    justify-content: space-between;
+}
+
+.filter .slider input{
+    width: 100%;
+    height: 5px;
+    accent-color: #5372f0;
+}
+
+.editor-panel .rotate{
+    margin-top: 17px;
+}
+
+.editor-panel .rotate button{
+    width: calc(100% / 4 - 3px);
+}
+
+.rotate button:nth-child(3), .rotate button:nth-child(4){
+    font-size: 18px;
+}
+
+.wrapper .preview-img{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+.preview-img img {
+    max-width: 490px;
+    max-height: 335px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.control{
+    display: flex;
+    justify-content: space-between;
+}
+
+.control button {
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 11px 20px;
+}
+
+.control .reset-filter {
+    color:#6C757D;
+    border: 1px solid #6C757D;
+}
+
+.control .choose-img{
+    background: #6C757D;
+    border: 1px solid #6C757D;
+}
+
+.control .save-img{
+    margin-left: 5px;
+    color: #fff;
+    background: #5372F0;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="edit.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Image Editor</h2>
+        <a href="dashboard.html">
+
+            <button>dashboard</button>
+        </a>
+        <div class="wrapper">
+
+            <div class="editor-panel">
+                <div class="filter">
+                    <label for="" class="title"></label>
+                    <div class="options">
+                        <button id="brightness" class="active">Brightness</button>
+                        <button id="saturation">Saturation</button>
+                        <button id="inversion">Inversion</button>
+                        <button id="grayscale">Grayscale</button>
+                    </div>
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Brightness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" min="0" max="200">
+                    </div>
+                </div>
+                <div class="rotate">
+                    <label for="" class="title">Rotate & Flip</label>
+                    <div class="options">
+                        <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button id="vertical"><i class="bx bx-reflect-vertical"></i></button>
+                        <button id="horizontal"><i class="bx bx-reflect-horizontal"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg"
+                    alt="preview-img" crossorigin="anonymous">
+            </div>
+        </div>
+        <div class="control">
+            <button class="reset-filter">Reset Filters</button>
+            <div class="row">
+                <input type="file" hidden class="file-input" accept="image/*">
+                <button class="choose-img">Upload Image</button>
+                <button class="save-img">Save Image</button>
+                <button class="store-img">Store to Cloud Gallery</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="edit.js"></script>
+</body>
+
+</html>
